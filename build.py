@@ -27,3 +27,14 @@ def post_mostrar():
 
 if __name__ == '__main__':
     freezer.freeze()
+    print("Copiando arquivos de configuração...")
+    source_redirects_file = '_redirects'
+    destination_folder = 'build'
+    
+    if os.path.exists(source_redirects_file):
+        shutil.copy(source_redirects_file, destination_folder)
+        print(" -> Arquivo '_redirects' copiado para a pasta 'build'.")
+    else:
+        print(f" -> AVISO: Arquivo '{source_redirects_file}' não encontrado na raiz.")
+
+    print("\nProcesso finalizado!")
