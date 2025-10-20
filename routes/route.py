@@ -15,7 +15,7 @@ def page_blog():
     posts = Post.lista_post_descrecente()
     return render_template("blog.html", posts=posts)
 
-@app.route('/blog/artigo/<int:post_id>')
+@app.route('/blog/artigo/<int:post_id>/')
 def post_mostrar(post_id):
     post = Post.query.get_or_404(post_id)
     rota = post.rota
