@@ -10,7 +10,7 @@ def home():
     titulo = "Portfólio"
     return render_template('home.html')
 
-@app.route('/blog')
+@app.route('/blog/')
 def page_blog():
     posts = Post.lista_post_descrecente()
     return render_template("blog.html", posts=posts)
