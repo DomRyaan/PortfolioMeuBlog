@@ -4,14 +4,20 @@ from database.post import Post
 from datetime import datetime
 
 
+
 @app.route('/')
 def home():
+    titulo = "Portfólio"
     return render_template('home.html')
 
 @app.route('/blog')
 def page_blog():
-    return render_template("blog.html")
+    posts = Post.lista_post_descrecente()
+    return render_template("blog.html", posts=posts)
 
-@app.route('/blog/bemvindo')
-def welcome():
-    return render_template("/artigos/welcome_1.html")
+@app.route('/blog/artigo/<int:post_id>')
+def post_mostrar(post_id):
+    post = Post.query.get_or_404(post_id)
+    rota = post.rota
+    titulo = post.titulo
+    return render_template(f"/artigos/{rota}", titulo=titulo)

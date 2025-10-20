@@ -3,15 +3,19 @@
 <main id="content">
     <div class="container pt-5" id="list-page">
         <h2 class="text-center pb-2">Blog</h2>
-        <div class="card w-100 mb-3">
-        <div class="card-body bg-transparent p-4 shadow-sm">
-            <h5 class="primary-font card-title">Boas Vindas</h5>
-            <p class="card-text secondary-font">Primeiro Post que eu faço nesse blog</p>
-            <div class="mt-auto post-footer bg-transparent py-3">
-                <a href="{{ url_for('welcome') }}" class="float-end btn btn-outline-info btn-sm">Ler</a>
+        
+        {% for post in posts %}
+            <div class="card w-100 mb-3">
+                <div class="card-body bg-transparent p-4 shadow-sm">
+                    <h5 class="primary-font card-title">{{ post.titulo }}</h5>
+                    <p class="card-text secondary-font">{{ post.trecho }}</p>
+                    <div class="mt-auto post-footer bg-transparent py-3">
+                        <a href="{{ url_for('post_mostrar', post_id=post.id) }}" class="float-end btn btn-outline-info btn-sm">Ler</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
+        {% endfor %}
+
     </div>
 </main>
 {% endblock %}
