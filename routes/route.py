@@ -8,7 +8,7 @@ from datetime import datetime
 @app.route('/')
 def home():
     titulo = "Portfólio"
-    return render_template('home.html')
+    return render_template('index.html')
 
 @app.route('/blog/')
 def page_blog():
