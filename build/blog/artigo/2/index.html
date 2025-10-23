@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Crawling (ou Rastreamento da Web)</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/gallery.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/theme.css">
+    <link rel="stylesheet" href="/static/css/list.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alata&amp;family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" media="all">
+     <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Alata&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    </noscript>
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header id="profile-header">
+        <nav class="pt-3 navbar navbar-expand-lg animate">
+            <div class="container-fluid mx-xs-2 mx-sm-5 mx-md-5 mx-lg-5">
+                <a class="navbar-brand primary-font text-wrap" href="/"> 
+                   <img src="/static/img/coroa.png" width="35" height="35" class="d-inline-block align-bottom"> Ryan Rodrigues
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg aria-hidden="true" height="24" viewBox="0 0 16 16" width="24" data-view-component="true"><path fill-rule="evenodd" d="M1 2.75A.75.75.0 011.75 2h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 2.75zm0 5A.75.75.0 011.75 7h12.5a.75.75.0 110 1.5H1.75A.75.75.0 011 7.75zM1.75 12a.75.75.0 100 1.5h12.5a.75.75.0 100-1.5H1.75z"></path>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse text-wrap primary-font" id="navbarContent">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#about" aria-label="about">Sobre Me</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#projects" aria-label="education">Projetos</a>
+                        </li>
+                         <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#experience" aria-label="experience">Experiência</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#education" aria-label="education">Educação</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/blog/" aria-label="archieve">Blog</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <a class="nav-link" href="/#contact" aria-label="contact">Contato</a>
+                        </li>
+                        <li class="nav-item navbar-text">
+                            <div class="text-center">
+                                <button id="theme-toggle">
+                                    <svg id="moon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path></svg>
+                                    <svg id="sun" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+<main id="post">
+    <div class="post-content">
+    <h1 class="text-center">Web Crawling (ou Rastreamento da Web)</h1>
+    <div class="container ">
+        <p>Web Crawling (ou Rastreamento da Web) é o processo pelo qual um programa automatizado, conhecido como Web Crawler, Spider (aranha) ou Bot, navega na World Wide Web de forma metódica e sistemática.</p>
+        <p>Irei montar na prática um Crawling para poder mapear o domínio do grupo marquise: 'https://www.marquiseambiental.com.br</p>
+        
+            <h2>Utilizando Scrapy</h2>
+                <p>Utilizarei a Biblioteca Scrapy, pela sua robustez e mecanismo, que facilita bastante o trabalho manual, já que a mesma faz inúmeros "trabalhos sujos" para a gente por baixo dos panos.
+                    A biblioteca Scrapy realiza uma grande parte do trabalho pesado para nós.</p>
+                <p>Ao utilizarmos o comando <code>scrapy startproject nome_da_aranha</code>, ela cria automaticamente toda a estrutura do projeto. Algo semelhante a isto:</p>
+                <pre class="code">
+                    tutorial/
+                        scrapy.cfg # deploy configuration file
+                        tutorial/  #project's Python module, you'll import your code from here
+                        _init__.py
+                        items.py # project items definition file
+                        middlewares.py  # project middlewares file
+                        pipelines.py # project pipelines file
+                        settings.py  # project settings file
+                        spiders/    # a directory where you'll later put your spiders
+                            _init__.py
+                </pre>
+                <p>Peguei isso da <a href="https://docs.scrapy.org/en/latest/intro/tutorial.html">documentação</a> do Scrapy.</p>
+
+                <p>O Scrapy cuida das requisições feitas ao servidor (um problema que encontrei ao usar o BeautifulSoup, onde eu precisava aliá-lo à biblioteca <code>urllib.request</code>).
+                    Em vez de implementar uma Fila padrão, você usa o comando <code>yield</code> para retornar um objeto <code>Request</code>.</p>
+            <h2>Componentes do Scrapy</h2>
+            <p>O Scrapy possui um componente chamado Scheduler (Agendador). 
+                Ele é o responsável por receber todas as requisições que o spider gera, agendá-las e enviá-las para os Downloaders (componente do Scrapy responsável por acessar a internet e buscar as páginas) no momento apropriado. 
+            <br>Além disso, o Scrapy também possui um filtro de requisição duplicada embutido, garantindo que ele não visite a mesma URL várias vezes.</p>
+
+            <h2>Definindo a Estrutura: Item e Grafos</h2>
+            <p>Antes de explicar como a estrutura foi montada, há dois conceitos importantes que precisam ser mencionados: o conceito de <strong>Item</strong>, do Scrapy, e o conceito de <strong>Grafos</strong>.</p>
+
+            <h3>Item</h3>
+            <p>O Item é uma parte fundamental no Scrapy que funciona como um contêiner para armazenar os dados coletados durante a raspagem. 
+                Além de armazenar, ele serve para estruturar e processar os dados coletados. O Scrapy suporta diferentes tipos de Itens (desde que sejam sustentados pela biblioteca <code>itemadapter</code>), 
+                mas usaremos os Objetos Item, que funcionam de forma muito similar aos dicionários padrão do Python, porém com recursos (ou features) adicionais.</p>
+
+            <h3>Grafos</h3>
+            <p>Um modelo de Grafo é um conjunto de conexões, composto por Vértices (ou Nós) conectados por Arestas (linhas).</p>
+            <figure>
+                <img src="/static//img/webScrapyArtigo/grafo.png" alt="Diagrama de Grafos: Página 1 e Página 2 conectadas por Arestas.">
+                <figcaption>Representação de Nós (Página 1 e Página 2) e Arestas (conexão).</figcaption>
+            </figure>
+            <p>Um Nó pode ser conectado a vários outros Nós, que chamamos de <i>vizinhos</i>. Na Web, a estrutura de Grafos é amplamente usada para representar a Estrutura de Dados em Árvore, já que esta é a base da Web, como a Árvore DOM, por exemplo. 
+            <br>Como pretendemos mapear os sites que estão ligados sob o mesmo domínio, usaremos grafos para poder estruturar esses dados de forma mais eficaz.</p>
+
+            <h2>Estrutura de Dados (items.py)</h2>
+            <p>Para isso, editei o arquivo <code>items.py</code> (que foi criado automaticamente pelo Scrapy), onde defini a estrutura de dados que o spider irá avaliar a cada nova chamada. Isso é crucial, pois, a cada <em>callback</em> do spider, apenas os objetos reconhecidos como Itens são passados para a Pipeline.</p>
+            <p>Como iremos percorrer a Árvore Web inteira, partindo da raiz (o), criaremos nossos Nós (<code>pagina_origem</code>), que serão conectados pelas Arestas (<code>links_destino</code>).</p>
+            <pre class="code">
+                class LinkGraphItem(Item):
+                    pagina_origem = Field()
+                    links_destino = Field()
+            </pre>
+            <p>E pronto! Preparamos a estrutura que será usada no nosso Web Crawling.</p>
+       
+   
+            <h2>Programando o Bot</h2>
+            <p>Na definição de nossa classe, que herdará de <code>CrawlSpider</code>, nomeamos o nosso spider/bot como: <code>marquise_bot</code>.
+                 Além desse, definimos mais três atributos: o domínio que será seguido ao longo das requisições, chamado de <code>allowed_domains</code>; a URL de partida (<code>start_urls</code>), 
+                 que será "https://www.marquiseambiental.com.br", a "raiz" do domínio.</p>
+            <p><strong>Observação:</strong> A Estrutura de Dados em Árvore é, sem dúvida, a predominante na Web. Ela vai desde a Árvore DOM até a forma como os sites se relacionam através das URLs. 
+            Embora o conceito predominante seja o de Árvore, aqui trataremos a estrutura como Grafos, o que será crucial para a modelagem dos dados mais adiante.</p>
+            <p>Por último, definimos nossas <code>rules</code> (regras), que estabelecem as condições que nosso spider irá seguir em suas requisições.</p>
+
+            <h3 >Definindo as Regras (Rules)</h3>
+            <pre class="code">
+                rules = (
+                    Rule (LinkExtractor(allow=r'marquiseambiental\.com\.br'),
+                    callback='parse_item',
+                    follow True),
+                    )
+            </pre>
+            <p>Utilizamos a classe <code>Rule</code> do Scrapy, na qual instanciamos outro objeto: o <code>LinkExtractor</code>. 
+            Dentro dele, inserimos uma regex básica para garantir que o bot seguirá somente links internos do domínio. 
+            No <em>callback</em>, indicamos a função que o bot irá chamar a cada nova requisição, que é a função <code>parse_item</code>. Para que o bot siga os links encontrados de forma recursiva, definimos o parâmetro <code>follow</code> como <code>True</code>.</p>
+
+            <h3>Função parse_item</h3>
+            <p>Em seguida, partiremos para a função <code>parse_item</code>:</p>
+            <pre>
+                def parse_item(self, response):
+            </pre>
+            <p>No início da função, inseri um <code>print</code> apenas para avisar que uma nova requisição começou. Primeiramente, capturamos todos os links da página. Usando o objeto <code>response</code> (que é o objeto da requisição), empregamos o seletor CSS (<code>a::attr(href)</code>) para buscar todos os atributos <code>href</code> da tag <code>&lt;a&gt;</code>.</p>
+            <p>Também criamos um Conjunto (<code>conjunto_links</code>) para coletar nossos links. A razão para usar a estrutura Conjunto é simples: ela não permite a repetição de elementos, garantindo que não armazenaremos o mesmo link várias vezes.</p>
+            <pre>
+                print("DEBUG: Processando a página: " + response.url)
+                links_encontrados  response.css(" a::attr(href)").getall()
+                conjunto_links = set()
+            </pre>
+            <p>Depois, criamos uma condição de checagem para verificar se o bot encontrou links:</p>
+            <pre>
+        if not links_encontrados:
+            print("DEBUG: Nenhum link encontrado!")
+            print("DEBUG: conteudo da resposta:\n" + response.text[:500])
+            </pre>
+            <p>Em seguida, criamos um laço <code>for</code> para iterar sobre os links encontrados na página:</p>
+            <pre>
+        for link in links_encontrados:
+            link_absoluto  response.urljoin(link)
+            if self.allowed_domains [0] in link_absoluto:
+                conjunto_links.add(link)
+            </pre>
+            <p>Antes de qualquer coisa, utilizamos <code>response.urljoin(link)</code> para converter o link em um formato absoluto, evitando erros, já que diversos links internos são relativos (exemplo: <code>/contato</code>). 
+                Lembra do parâmetro <code>allow</code>, no <code>LinkExtractor</code>? Poderíamos ter deixado o trabalho para ele, mas preferimos fazer uma última checagem para ter certeza de que não estamos adicionando nenhum link que não pertença ao domínio.</p>
+            <p>Finalmente, conectamos a estrutura de dados com o nosso Bot. Instanciamos a classe que criamos (<code>LinkGraphItem</code>). A cada requisição, o bot pega a URL atual e a armazena no atributo/nó chamado <code>pagina_origem</code>. 
+                Em seguida, todos os links guardados no nosso conjunto são armazenados no atributo <code>links_destino</code>, que representa nossas arestas.</p>
+            <pre>
+                item = LinkGraphItem()
+                item['pagina_origem'] = response.url
+                item['links_destino'] = list(conjunto_links)
+                yield item
+            </pre>
+            <p>Para finalizar, utilizamos o <code>yield</code> para retornar o nosso objeto Item para uma nova requisição, repetindo o processo recursivamente.</p>
+
+            <h2>Extração dos Dados</h2>
+            <p>Conforme mencionado, os Objetos Item do Scrapy se assemelham a dicionários padrão do Python, mas com recursos extras. 
+                <br>O Scrapy possui um <code>Item Exporter</code> que pode exportar os dados coletados pelo Objeto Item para vários tipos de arquivos, desde CSV até JSON. 
+                <br>Como o nosso modelo se baseia em Grafos e a melhor maneira de representá-lo em código é por meio de dicionários, optamos por exportar os dados para JSON, já que a estrutura de ambos é bastante similar.</p>
+            <p>Faço isso digitando o comando: <code>scrapy crawl marquise_bot -o grafo_links.json</code> no terminal. E ele cria um arquivo json na raiz do projeto e grava os dados coletados lá.</p>
+            <figure>
+                <img src="url_for('static', filename='img/webScrapyArtigo/arquivo_json.png')" alt="Captura de tela de dados extraídos em formato similar a JSON.">
+                <figcaption>Amostra de dados extraídos (<code>pagina_origem</code> e <code>links_destino</code>).</figcaption>
+            </figure>
+            <p>Como dá para ver, é bastante dados bruto, quase não dá para ler. 
+            <br>Lembrando que essa imagem é só uma parte do arquivo KKKKK!!.</p>
+     
+
+            <h2>Análise de Dados</h2>
+            <p>Agora, iremos fazer o trabalho de uma analista de dados. [cite_start]Como eu tive que fazer inúmeras verificações, não tem um código "definitivo". Eu alterei o código váaarias vezes para perceber os padrões que o código seguia.</p>
+            <pre>
+                import json
+                with open('grafo_links.json', 'r', encoding='utf-8') as f:
+                    lista_de_paginas = json.load(f)
+
+                grafo = {}
+                for item in lista_de_paginas:
+                    pagina = item['pagina_origem']
+                    links = item['links_destino']
+                    grafo[pagina] = links
+
+                print(f"Grafo concluido! Total de {len(grafo)} nós mapeadas")
+                raiz = 'https://www.marquiseambiental.com.br'
+                for link in grafo[raiz]:
+                    if ('/noticias' or '/noticias_') in link:
+                        display(link)
+            </pre>
+            <p>No entanto, para a análise, utilizarei somente os dados obtidos no rastreamento dos links presentes na página principal do domínio.</p>
+            <p>Ao analisar os diferentes links, percebi que havia dois padrões de caminho que se referiam a Notícias:</p>
+            <ol>
+            <li><code>/noticias</code>: Levava à página que listava as diferentes notícias (o <em>feed</em> ou arquivo de notícias).</li>
+            <li><code>/noticias_</code>: Era usado como o caminho base para os artigos (páginas individuais de notícia).</li>
+            </ol>
+            <p>Não é possível determinar o motivo dessa dualidade sem acesso à estrutura de desenvolvimento do site (já que não podemos "ler pensamentos" ou adivinhar a lógica por trás da implementação).</p>
+            <p>A execução do código mostrou:</p>
+            <img src="url_for('static', filename='/img/webScrapyArtigo/output.png')">
+            <p>Executando o código que mostrei, ele mostra todos os links que estão ligados aos dois caminhos "noticias".</p>
+            <p>Há muitos caminhos, simplesmente muuuitos. Tive que rodar muito código e alterar para extrair padrão e poder mapear.</p>
+        
+            <h2>Mapeação</h2>
+            <p>Depois, fui abrir o Excalidraw para desenhar uma parte da arquitetura do site e cheguei nessa conclusão:</p>
+            <figure>
+                <img src="/static//img/webScrapyArtigo/mapeamento.png" alt="Diagrama de Mapeamento da Arquitetura do Site.">
+                <figcaption>Mapeamento de parte da arquitetura do site, partindo da raiz.</figcaption>
+            </figure>
+            <p>Mencionei que há muitos outros caminhos que não seguiam um padrão claro ou que apareciam apenas uma única vez. 
+            <br>Por isso, mapeei somente aqueles que demonstravam ter vários outros sites (ou páginas) ligados a eles. 
+            <br>Muitos desses caminhos, na verdade, não levavam a uma página final, servindo apenas como camadas de navegação ou diretórios. 
+            Isso fica evidente no caso do caminho <code>/noticias_</code> que servia simplesmente para conectar a alguns artigos e nada mais, enquanto o caminho <code>/noticias</code> era o que, de fato, levava à página que listava os diferentes artigos.</p>   
+    </div>
+</main>
+
+    <footer class="mt-auto">
+            <div class="row justify-content-center">
+                <div class="col-md-4 text-center">
+                    <div class="pb-2">
+                        <a href="https://themes.gohugo.io">Hugo Profile</a>
+                        <p>© 2025 Todos direito reservado ao Ryan</p>
+                    </div>
+                </div>
+            </div>
+    </footer>
+ <script>
+       // Função para aplicar o tema (claro ou escuro)
+        function applyTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                document.body.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+                document.body.classList.remove('dark');
+            }
+        }
+
+        // Lógica para o botão de troca de tema
+        const themeToggleButton = document.getElementById('theme-toggle');
+        if (themeToggleButton) {
+            themeToggleButton.addEventListener('click', () => {
+                // Verifica se o tema atual é escuro
+                const isDark = document.body.classList.contains('dark');
+                // Define o novo tema como o oposto
+                const newTheme = isDark ? 'light' : 'dark';
+                // Salva a preferência no localStorage
+                localStorage.setItem('pref-theme', newTheme);
+                // Aplica o novo tema
+                applyTheme(newTheme);
+            });
+        }
+
+        // Aplica o tema inicial ao carregar a página
+        const savedTheme = localStorage.getItem('pref-theme');
+        const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (systemPrefersDark) {
+            applyTheme('dark');
+        }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</body>
+</html>
