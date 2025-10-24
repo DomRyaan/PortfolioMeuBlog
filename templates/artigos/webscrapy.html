@@ -44,7 +44,7 @@
             <h3>Grafos</h3>
             <p>Um modelo de Grafo é um conjunto de conexões, composto por Vértices (ou Nós) conectados por Arestas (linhas).</p>
             <figure>
-                <img src="{{ url_for('static', filename='img/webScrapyArtigo/grafo.png')}}" alt="Diagrama de Grafos: Página 1 e Página 2 conectadas por Arestas.">
+                <img src="{{ url_for('static', filename='img/webscrapyArtigo/grafo.png')}}" alt="Diagrama de Grafos: Página 1 e Página 2 conectadas por Arestas.">
                 <figcaption>Representação de Nós (Página 1 e Página 2) e Arestas (conexão).</figcaption>
             </figure>
             <p>Um Nó pode ser conectado a vários outros Nós, que chamamos de <i>vizinhos</i>. Na Web, a estrutura de Grafos é amplamente usada para representar a Estrutura de Dados em Árvore, já que esta é a base da Web, como a Árvore DOM, por exemplo. 
@@ -124,7 +124,7 @@
                 <br>Como o nosso modelo se baseia em Grafos e a melhor maneira de representá-lo em código é por meio de dicionários, optamos por exportar os dados para JSON, já que a estrutura de ambos é bastante similar.</p>
             <p>Faço isso digitando o comando: <code>scrapy crawl marquise_bot -o grafo_links.json</code> no terminal. E ele cria um arquivo json na raiz do projeto e grava os dados coletados lá.</p>
             <figure>
-                <img src="url_for('static', filename='img/webScrapyArtigo/arquivo_json.png')" alt="Captura de tela de dados extraídos em formato similar a JSON.">
+                <img src="url_for('static', filename='img/webscrapyArtigo/arquivo_json.png')" alt="Captura de tela de dados extraídos em formato similar a JSON.">
                 <figcaption>Amostra de dados extraídos (<code>pagina_origem</code> e <code>links_destino</code>).</figcaption>
             </figure>
             <p>Como dá para ver, é bastante dados bruto, quase não dá para ler. 
@@ -158,14 +158,14 @@
             </ol>
             <p>Não é possível determinar o motivo dessa dualidade sem acesso à estrutura de desenvolvimento do site (já que não podemos "ler pensamentos" ou adivinhar a lógica por trás da implementação).</p>
             <p>A execução do código mostrou:</p>
-            <img src="url_for('static', filename='img/webScrapyArtigo/output.png')">
+            <img src="url_for('static', filename='img/webscrapyArtigo/output.png')">
             <p>Executando o código que mostrei, ele mostra todos os links que estão ligados aos dois caminhos "noticias".</p>
             <p>Há muitos caminhos, simplesmente muuuitos. Tive que rodar muito código e alterar para extrair padrão e poder mapear.</p>
         
             <h2>Mapeação</h2>
             <p>Depois, fui abrir o Excalidraw para desenhar uma parte da arquitetura do site e cheguei nessa conclusão:</p>
             <figure>
-                <img src="{{url_for('static', filename='img/webScrapyArtigo/mapeamento.png')}}" alt="Diagrama de Mapeamento da Arquitetura do Site.">
+                <img src="{{url_for('static', filename='img/webscrapyArtigo/mapeamento.png')}}" alt="Diagrama de Mapeamento da Arquitetura do Site.">
                 <figcaption>Mapeamento de parte da arquitetura do site, partindo da raiz.</figcaption>
             </figure>
             <p>Mencionei que há muitos outros caminhos que não seguiam um padrão claro ou que apareciam apenas uma única vez. 
